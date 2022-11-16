@@ -1,0 +1,1600 @@
+{
+  "contractName": "StorageContract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fileID",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "fileStorage",
+      "outputs": [
+        {
+          "name": "fileID",
+          "type": "uint256"
+        },
+        {
+          "name": "fileOwner",
+          "type": "address"
+        },
+        {
+          "name": "fileName",
+          "type": "string"
+        },
+        {
+          "name": "fileHash",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_fileName",
+          "type": "string"
+        },
+        {
+          "name": "_fileHash",
+          "type": "string"
+        },
+        {
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "addFile",
+      "outputs": [
+        {
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.1+commit.c8a2cb62\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"fileID\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_fileName\",\"type\":\"string\"},{\"name\":\"_fileHash\",\"type\":\"string\"},{\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"addFile\",\"outputs\":[{\"name\":\"status\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"fileStorage\",\"outputs\":[{\"name\":\"fileID\",\"type\":\"uint256\"},{\"name\":\"fileOwner\",\"type\":\"address\"},{\"name\":\"fileName\",\"type\":\"string\"},{\"name\":\"fileHash\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/egesabanci/Desktop/projects/ipfs-bsc-storage-js/contracts/StorageContract.sol\":\"StorageContract\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/egesabanci/Desktop/projects/ipfs-bsc-storage-js/contracts/StorageContract.sol\":{\"keccak256\":\"0x149a61818d65eaf35ef559066c355eddad58017a5d1ef280912abcbc07322ab7\",\"urls\":[\"bzzr://178b1b0e03c93adb8572b3d26ae4e50efb830ecb21dab5a6ebddbe05e1e2f22a\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610713806100246000396000f3fe608060405260043610610051576000357c01000000000000000000000000000000000000000000000000000000009004806322bbd79c14610056578063357f81cf1461008157806372df54f314610218575b600080fd5b34801561006257600080fd5b5061006b610372565b6040518082815260200191505060405180910390f35b34801561008d57600080fd5b506101fe600480360360608110156100a457600080fd5b81019080803590602001906401000000008111156100c157600080fd5b8201836020820111156100d357600080fd5b803590602001918460018302840111640100000000831117156100f557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561015857600080fd5b82018360208201111561016a57600080fd5b8035906020019184600183028401116401000000008311171561018c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610378565b604051808215151515815260200191505060405180910390f35b34801561022457600080fd5b506102516004803603602081101561023b57600080fd5b8101908080359060200190929190505050610483565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156102cd5780820151818401526020810190506102b2565b50505050905090810190601f1680156102fa5780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610333578082015181840152602081019050610318565b50505050905090810190601f1680156103605780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60005481565b6000600160008082825401925050819055506000829050610397610603565b60806040519081016040528060005481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018781526020018681525090508060016000805481526020019081526020016000206000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002019080519060200190610455929190610642565b506060820151816003019080519060200190610472929190610642565b509050506001925050509392505050565b60016020528060005260406000206000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055b5780601f106105305761010080835404028352916020019161055b565b820191906000526020600020905b81548152906001019060200180831161053e57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105f95780601f106105ce576101008083540402835291602001916105f9565b820191906000526020600020905b8154815290600101906020018083116105dc57829003601f168201915b5050505050905084565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061068357805160ff19168380011785556106b1565b828001600101855582156106b1579182015b828111156106b0578251825591602001919060010190610695565b5b5090506106be91906106c2565b5090565b6106e491905b808211156106e05760008160009055506001016106c8565b5090565b9056fea165627a7a7230582010f096f18f7572bb70dc7284fc49436ca52ce3662a9e1ca4dc8f39c761718f0f0029",
+  "deployedBytecode": "0x608060405260043610610051576000357c01000000000000000000000000000000000000000000000000000000009004806322bbd79c14610056578063357f81cf1461008157806372df54f314610218575b600080fd5b34801561006257600080fd5b5061006b610372565b6040518082815260200191505060405180910390f35b34801561008d57600080fd5b506101fe600480360360608110156100a457600080fd5b81019080803590602001906401000000008111156100c157600080fd5b8201836020820111156100d357600080fd5b803590602001918460018302840111640100000000831117156100f557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561015857600080fd5b82018360208201111561016a57600080fd5b8035906020019184600183028401116401000000008311171561018c57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610378565b604051808215151515815260200191505060405180910390f35b34801561022457600080fd5b506102516004803603602081101561023b57600080fd5b8101908080359060200190929190505050610483565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156102cd5780820151818401526020810190506102b2565b50505050905090810190601f1680156102fa5780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b83811015610333578082015181840152602081019050610318565b50505050905090810190601f1680156103605780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60005481565b6000600160008082825401925050819055506000829050610397610603565b60806040519081016040528060005481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018781526020018681525090508060016000805481526020019081526020016000206000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002019080519060200190610455929190610642565b506060820151816003019080519060200190610472929190610642565b509050506001925050509392505050565b60016020528060005260406000206000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055b5780601f106105305761010080835404028352916020019161055b565b820191906000526020600020905b81548152906001019060200180831161053e57829003601f168201915b505050505090806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105f95780601f106105ce576101008083540402835291602001916105f9565b820191906000526020600020905b8154815290600101906020018083116105dc57829003601f168201915b5050505050905084565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061068357805160ff19168380011785556106b1565b828001600101855582156106b1579182015b828111156106b0578251825591602001919060010190610695565b5b5090506106be91906106c2565b5090565b6106e491905b808211156106e05760008160009055506001016106c8565b5090565b9056fea165627a7a7230582010f096f18f7572bb70dc7284fc49436ca52ce3662a9e1ca4dc8f39c761718f0f0029",
+  "sourceMap": "66:503:0:-;;;220:1;199:22;;66:503;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:503:0;;;;;;;",
+  "deployedSourceMap": "66:503:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;199:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;199:22:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;271:296;;8:9:-1;5:2;;;30:1;27;20:12;5:2;271:296:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;271:296:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;271:296:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;271:296:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;271:296:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;271:296:0;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;271:296:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;271:296:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;271:296:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;271:296:0;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;225:41;;8:9:-1;5:2;;;30:1;27;20:12;5:2;225:41:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;225:41:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;225:41:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;225:41:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;199:22;;;;:::o;271:296::-;369:11;398:1;388:6;;:11;;;;;;;;;;;405:18;426:5;405:26;;437:19;;:::i;:::-;459:46;;;;;;;;;464:6;;459:46;;;;472:10;459:46;;;;;;484:9;459:46;;;;495:9;459:46;;;437:68;;533:7;511:11;:19;523:6;;511:19;;;;;;;;;;;:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;558:4;551:11;;;;271:296;;;;;:::o;225:41::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;66:503::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract StorageContract {\n\n  struct File {\n    uint fileID;\n    address fileOwner;\n    string fileName;\n    string fileHash;\n  }\n\n  uint public fileID = 0;\n  mapping (uint => File) public fileStorage;\n\n  function addFile(string memory _fileName, string memory _fileHash, address owner) public returns (bool status) {\n    fileID += 1;\n    address _fileOwner = owner;\n    File memory newFile = File(fileID, _fileOwner, _fileName, _fileHash);\n    fileStorage[fileID] = newFile;\n    \n    return true;\n  }\n}",
+  "sourcePath": "/home/egesabanci/Desktop/projects/ipfs-bsc-storage-js/contracts/StorageContract.sol",
+  "ast": {
+    "absolutePath": "/home/egesabanci/Desktop/projects/ipfs-bsc-storage-js/contracts/StorageContract.sol",
+    "exportedSymbols": {
+      "StorageContract": [
+        55
+      ]
+    },
+    "id": 56,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 55,
+        "linearizedBaseContracts": [
+          55
+        ],
+        "name": "StorageContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "StorageContract.File",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "fileID",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "114:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "fileOwner",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "131:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "131:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "fileName",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "154:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "154:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "fileHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "175:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "175:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "File",
+            "nodeType": "StructDefinition",
+            "scope": 55,
+            "src": "96:99:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 13,
+            "name": "fileID",
+            "nodeType": "VariableDeclaration",
+            "scope": 55,
+            "src": "199:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 11,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "199:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 12,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "220:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 17,
+            "name": "fileStorage",
+            "nodeType": "VariableDeclaration",
+            "scope": 55,
+            "src": "225:41:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_File_$10_storage_$",
+              "typeString": "mapping(uint256 => struct StorageContract.File)"
+            },
+            "typeName": {
+              "id": 16,
+              "keyType": {
+                "id": 14,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "234:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "225:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_File_$10_storage_$",
+                "typeString": "mapping(uint256 => struct StorageContract.File)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 15,
+                "name": "File",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 10,
+                "src": "242:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_File_$10_storage_ptr",
+                  "typeString": "struct StorageContract.File"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 53,
+              "nodeType": "Block",
+              "src": "382:185:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 28,
+                      "name": "fileID",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13,
+                      "src": "388:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 29,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "398:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "388:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "388:11:0"
+                },
+                {
+                  "assignments": [
+                    33
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 33,
+                      "name": "_fileOwner",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 53,
+                      "src": "405:18:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 32,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "405:7:0",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 35,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "id": 34,
+                    "name": "owner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 23,
+                    "src": "426:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "405:26:0"
+                },
+                {
+                  "assignments": [
+                    37
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 37,
+                      "name": "newFile",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 53,
+                      "src": "437:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_File_$10_memory_ptr",
+                        "typeString": "struct StorageContract.File"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 36,
+                        "name": "File",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 10,
+                        "src": "437:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_File_$10_storage_ptr",
+                          "typeString": "struct StorageContract.File"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 44,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 39,
+                        "name": "fileID",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "464:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 40,
+                        "name": "_fileOwner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33,
+                        "src": "472:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 41,
+                        "name": "_fileName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 19,
+                        "src": "484:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 42,
+                        "name": "_fileHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "495:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 38,
+                      "name": "File",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "459:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_File_$10_storage_ptr_$",
+                        "typeString": "type(struct StorageContract.File storage pointer)"
+                      }
+                    },
+                    "id": 43,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "459:46:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_File_$10_memory",
+                      "typeString": "struct StorageContract.File memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "437:68:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 49,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "fileStorage",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 17,
+                        "src": "511:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_File_$10_storage_$",
+                          "typeString": "mapping(uint256 => struct StorageContract.File storage ref)"
+                        }
+                      },
+                      "id": 47,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "fileID",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "523:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "511:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_File_$10_storage",
+                        "typeString": "struct StorageContract.File storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 48,
+                      "name": "newFile",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "533:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_File_$10_memory_ptr",
+                        "typeString": "struct StorageContract.File memory"
+                      }
+                    },
+                    "src": "511:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_File_$10_storage",
+                      "typeString": "struct StorageContract.File storage ref"
+                    }
+                  },
+                  "id": 50,
+                  "nodeType": "ExpressionStatement",
+                  "src": "511:29:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "558:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 27,
+                  "id": 52,
+                  "nodeType": "Return",
+                  "src": "551:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 54,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFile",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "_fileName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "288:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 18,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "288:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 21,
+                  "name": "_fileHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "313:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "338:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "287:65:0"
+            },
+            "returnParameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 26,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54,
+                  "src": "369:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 25,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "369:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "368:13:0"
+            },
+            "scope": 55,
+            "src": "271:296:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 56,
+        "src": "66:503:0"
+      }
+    ],
+    "src": "32:537:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/egesabanci/Desktop/projects/ipfs-bsc-storage-js/contracts/StorageContract.sol",
+      "exportedSymbols": {
+        "StorageContract": [
+          55
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            55
+          ],
+          "name": "StorageContract",
+          "scope": 56
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "StorageContract.File",
+              "name": "File",
+              "scope": 55,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fileID",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "114:4:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "114:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fileOwner",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "131:7:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "131:17:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fileName",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "154:6:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "154:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fileHash",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "175:6:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "175:15:0"
+              }
+            ],
+            "id": 10,
+            "name": "StructDefinition",
+            "src": "96:99:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "fileID",
+              "scope": 55,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 11,
+                "name": "ElementaryTypeName",
+                "src": "199:4:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 12,
+                "name": "Literal",
+                "src": "220:1:0"
+              }
+            ],
+            "id": 13,
+            "name": "VariableDeclaration",
+            "src": "199:22:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "fileStorage",
+              "scope": 55,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct StorageContract.File)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct StorageContract.File)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 14,
+                    "name": "ElementaryTypeName",
+                    "src": "234:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "File",
+                      "referencedDeclaration": 10,
+                      "type": "struct StorageContract.File"
+                    },
+                    "id": 15,
+                    "name": "UserDefinedTypeName",
+                    "src": "242:4:0"
+                  }
+                ],
+                "id": 16,
+                "name": "Mapping",
+                "src": "225:22:0"
+              }
+            ],
+            "id": 17,
+            "name": "VariableDeclaration",
+            "src": "225:41:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addFile",
+              "scope": 55,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_fileName",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 18,
+                        "name": "ElementaryTypeName",
+                        "src": "288:6:0"
+                      }
+                    ],
+                    "id": 19,
+                    "name": "VariableDeclaration",
+                    "src": "288:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_fileHash",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "313:6:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "VariableDeclaration",
+                    "src": "313:23:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "owner",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "338:7:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "338:13:0"
+                  }
+                ],
+                "id": 24,
+                "name": "ParameterList",
+                "src": "287:65:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "status",
+                      "scope": 54,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 25,
+                        "name": "ElementaryTypeName",
+                        "src": "369:4:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "VariableDeclaration",
+                    "src": "369:11:0"
+                  }
+                ],
+                "id": 27,
+                "name": "ParameterList",
+                "src": "368:13:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "uint256",
+                              "value": "fileID"
+                            },
+                            "id": 28,
+                            "name": "Identifier",
+                            "src": "388:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 29,
+                            "name": "Literal",
+                            "src": "398:1:0"
+                          }
+                        ],
+                        "id": 30,
+                        "name": "Assignment",
+                        "src": "388:11:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "ExpressionStatement",
+                    "src": "388:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        33
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "_fileOwner",
+                          "scope": 53,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "address",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 32,
+                            "name": "ElementaryTypeName",
+                            "src": "405:7:0"
+                          }
+                        ],
+                        "id": 33,
+                        "name": "VariableDeclaration",
+                        "src": "405:18:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 23,
+                          "type": "address",
+                          "value": "owner"
+                        },
+                        "id": 34,
+                        "name": "Identifier",
+                        "src": "426:5:0"
+                      }
+                    ],
+                    "id": 35,
+                    "name": "VariableDeclarationStatement",
+                    "src": "405:26:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        37
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newFile",
+                          "scope": 53,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct StorageContract.File",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "File",
+                              "referencedDeclaration": 10,
+                              "type": "struct StorageContract.File"
+                            },
+                            "id": 36,
+                            "name": "UserDefinedTypeName",
+                            "src": "437:4:0"
+                          }
+                        ],
+                        "id": 37,
+                        "name": "VariableDeclaration",
+                        "src": "437:19:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "struct StorageContract.File memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "type(struct StorageContract.File storage pointer)",
+                              "value": "File"
+                            },
+                            "id": 38,
+                            "name": "Identifier",
+                            "src": "459:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 13,
+                              "type": "uint256",
+                              "value": "fileID"
+                            },
+                            "id": 39,
+                            "name": "Identifier",
+                            "src": "464:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 33,
+                              "type": "address",
+                              "value": "_fileOwner"
+                            },
+                            "id": 40,
+                            "name": "Identifier",
+                            "src": "472:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19,
+                              "type": "string memory",
+                              "value": "_fileName"
+                            },
+                            "id": 41,
+                            "name": "Identifier",
+                            "src": "484:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "string memory",
+                              "value": "_fileHash"
+                            },
+                            "id": 42,
+                            "name": "Identifier",
+                            "src": "495:9:0"
+                          }
+                        ],
+                        "id": 43,
+                        "name": "FunctionCall",
+                        "src": "459:46:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "VariableDeclarationStatement",
+                    "src": "437:68:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct StorageContract.File storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct StorageContract.File storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 17,
+                                  "type": "mapping(uint256 => struct StorageContract.File storage ref)",
+                                  "value": "fileStorage"
+                                },
+                                "id": 45,
+                                "name": "Identifier",
+                                "src": "511:11:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13,
+                                  "type": "uint256",
+                                  "value": "fileID"
+                                },
+                                "id": 46,
+                                "name": "Identifier",
+                                "src": "523:6:0"
+                              }
+                            ],
+                            "id": 47,
+                            "name": "IndexAccess",
+                            "src": "511:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "struct StorageContract.File memory",
+                              "value": "newFile"
+                            },
+                            "id": 48,
+                            "name": "Identifier",
+                            "src": "533:7:0"
+                          }
+                        ],
+                        "id": 49,
+                        "name": "Assignment",
+                        "src": "511:29:0"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "ExpressionStatement",
+                    "src": "511:29:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 27
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 51,
+                        "name": "Literal",
+                        "src": "558:4:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "Return",
+                    "src": "551:11:0"
+                  }
+                ],
+                "id": 53,
+                "name": "Block",
+                "src": "382:185:0"
+              }
+            ],
+            "id": 54,
+            "name": "FunctionDefinition",
+            "src": "271:296:0"
+          }
+        ],
+        "id": 55,
+        "name": "ContractDefinition",
+        "src": "66:503:0"
+      }
+    ],
+    "id": 56,
+    "name": "SourceUnit",
+    "src": "32:537:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
+  },
+  "networks": {
+    "97": {
+      "events": {},
+      "links": {},
+      "address": "0x8999cF01DCE57E104FD019a677EAD54Ce1ba64Fc",
+      "transactionHash": "0x0ac6d558181a8764b3f8184ded90866544f8b8ecbc175ff520f41270b10aa698"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-23T10:20:48.863Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
