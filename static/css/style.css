@@ -1,0 +1,101 @@
+:root {
+  --dark: #222831;
+  --pink: #0d0b2e;
+  --white: whitesmoke;
+  --font-fam: "Ubuntu";
+}
+
+body {
+  background-color: var(--dark);
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--font-fam);
+}
+
+.navbar-section {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5vh 0vw;
+  padding: 0vh 5vw;
+}
+
+.navbar-header {
+  width: 80vw;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar-links {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-button {
+  color: var(--white);
+  background-color: var(--pink);
+  margin-right: 1vw;
+}
+
+.navbar-header h3 {
+  color: var(--white);
+}
+
+.about-section {
+  margin: 2vh 0vw;
+  padding: 0vh 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.about-section img {
+  width: 17vw;
+  padding: 2vw;
+}
+
+.about-section-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width : 768px) {
+  .navbar-section {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-header {
+    width: auto;
+  }
+
+  .navbar-links {
+    width: auto;
+  }
+
+  .about-section img {
+    width: 30vw;
+    padding: 2vw;
+  }
+}
+
+.list-group-item {
+  padding: 1.3vw;
+  color: var(--dark);
+}
+
+@media (max-width : 420px) {
+  .small-heading {
+    display: none;
+  }
+}
