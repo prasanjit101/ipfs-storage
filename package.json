@@ -1,15 +1,10 @@
 {
-  "name": "ipfs-bsc-storage",
+  "name": "ipfs-storage",
   "version": "1.0.0",
-  "description": "Simple file storage with IPFS and Binance Testnet",
+  "description": "Simple file storage with IPFS and Blockchain",
   "main": "truffle-config.js",
-  "keywords": [
-    "ipfs",
-    "blockchain",
-    "decentralized-systems",
-    "distributed-systems"
-  ],
-  "author": "egesabanci@outlook.com.tr",
+  "keywords": [],
+  "author": "Prasanjit Dutta",
   "license": "MIT",
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.2.6",
